@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Total Pictures</th>
+		<th></th>
+	</thead>
+	<tbody>
+		{{#each}}
+		<tr>
+			<td>{{link-to name "picture-albums.show" this}}</td>
+			<td>{{description}}</td>
+			<td>{{pictureCount}}</td>
+			<td>ACTIONS will go here</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
