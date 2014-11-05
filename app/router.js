@@ -10,6 +10,7 @@ Router.map(function() {
   	this.route('show', { path: ':picture_album_id' });
   });
   
+  this.route('picture-albums/new');
 });
 
 export default Router;
