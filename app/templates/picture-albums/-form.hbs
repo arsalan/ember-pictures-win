@@ -1,7 +1,7 @@
 <style type="text/css">
 
 #title {
-	width: 330px;
+	/*width: 330px;*/
 	height: 26px;
 	color: #5A698B;
 	padding-top: 5px;
@@ -56,7 +56,7 @@ div.row {
 .submit {
 	height: 29px;
 	width: 330px;
-	padding-top: 95px;
+	padding-top: 15px;
 	clear: both;
 } 
 
@@ -79,27 +79,22 @@ div.row {
 
 </style>
 
-<form action="#" method="post">
+<form method="post">
 	<div class="row">
 		<label class="col1">Name:&nbsp;&nbsp;</label>
-		<span class="col2">
+		<span class="col3">
 			{{input value=name type="text" id="name" size="20" tabindex="1"}}
 		</span>
 	</div>
 
 	<div class="row">
-		<label class="col1">Picture Count:&nbsp;&nbsp;</label>
-		<span class="col2">
-			{{input name="pictureCount" value=pictureCount size="20" tabindex="2"}}
-		</span>
-	</div>
-		<div class="row">
 		<label class="col1">Description:&nbsp;&nbsp;</label>
-		<span class="col2">
+		<span class="col3">
 			{{textarea value=description cols="20" rows="4" tabindex="3"}}
 		</span>
 	</div>
 	<div align="center" class="submit">
 		<input type="submit" {{action "save"}} value="Save" />
+		<button {{action "cancel"}}>Cancel</button>
 	</div>
 </form>
