@@ -11,8 +11,6 @@ Router.map(function() {
   	this.route('new');
   	this.route('edit', { path: ':picture_album_id/edit' });
   });
-  
-  
 });
 
 export default Router;

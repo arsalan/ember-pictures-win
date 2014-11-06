@@ -2,6 +2,8 @@
 <p>{{description}}</p>
 <p>There are {{pictureCount}} pictures in this album.</p>
 
+{{link-to "Edit" "picture-albums.edit" this}} <button {{action "delete" this}}>Delete</button>
+
 <div class="wrap">
     {{#each picture in pictures}}
 	  <div class="box">

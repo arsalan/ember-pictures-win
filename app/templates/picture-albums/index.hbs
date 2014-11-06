@@ -14,7 +14,7 @@
 			<td>{{link-to name "picture-albums.show" this}}</td>
 			<td>{{description}}</td>
 			<td>{{pictureCount}}</td>
-			<td>{{link-to "Edit" "picture-albums.edit" this}} | Delete</td>
+			<td>{{link-to "Edit" "picture-albums.edit" this}} | <button {{action "delete" this}}>Delete</td>
 		</tr>
 		{{/each}}
 	</tbody>
