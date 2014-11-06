@@ -1,3 +1,6 @@
+<h4>
+	{{link-to "Create New" "picture-albums.new"}}
+</h4>
 <table>
 	<thead>
 		<th>Name</th>
@@ -11,7 +14,7 @@
 			<td>{{link-to name "picture-albums.show" this}}</td>
 			<td>{{description}}</td>
 			<td>{{pictureCount}}</td>
-			<td>ACTIONS will go here</td>
+			<td>{{link-to "Edit" "picture-albums.edit" this}} | Delete</td>
 		</tr>
 		{{/each}}
 	</tbody>
