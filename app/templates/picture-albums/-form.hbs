@@ -77,6 +77,20 @@ div.row {
 	margin: 4px 0 5px 8px;
 }
 
+fieldset {
+	width: 640px;
+}
+
+fieldset label {
+	float: left;
+	width: 25%;
+}
+
+fieldset span {
+	width: 65%;
+	margin-left: 30%;
+}
+
 </style>
 
 <form method="post">
@@ -91,8 +105,27 @@ div.row {
 	<div class="row">
 		<label class="col1">Description:&nbsp;&nbsp;</label>
 		<span class="col3">
-			{{textarea value=description cols="20" rows="4" tabindex="3"}}
+			{{textarea value=description cols="20" rows="4"}}
 		</span>
+	</div>
+	<div class="pictures">
+		<button {{action "addPicture"}}>Add Picture</button>
+		<hr />
+		{{#each picture in pictures}}
+			<fieldset>
+				<legend><h5>Name: {{input value=picture.name}}</h5></legend>
+				<label class="col1">Description:</label> 
+				<span class="col1">{{input value=picture.description}}</span>
+				<label class="col1">Width:</label>
+				<span class="col1"> {{input value=picture.width}}</span>
+				<label class="col1">Height:</label> 
+				<span class="col1">{{input value=picture.height}}</span>
+				<label class="col1">URL:</label> 
+				<span class="col1">{{input value=picture.url}}</span>
+			</fieldset>
+			<hr />
+		{{/each}}
+
 	</div>
 	<div align="center" class="submit">
 		<input type="submit" {{action "save"}} value="Save" />
